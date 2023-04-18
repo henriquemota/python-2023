@@ -19,7 +19,7 @@ def criar_banco():
     cursor.execute(sql)
   except conector.DatabaseError as err:
     print('erro de banco de dados')
-  except:
+  except conector.Error as err:
     print('erro')
   finally:
     cursor.close()
